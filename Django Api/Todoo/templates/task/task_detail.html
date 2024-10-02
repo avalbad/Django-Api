@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{%block title%}
+
+{%endblock%}
+
+{%block content%}
+<h1>View Task</h1>
+
+    <ul>
+        <li>{{ object.title }}</li>
+        <li>{{ object.content }}</li>
+        <li>{{ object.created_at }}</li>
+        <a href="{% url 'Task:sho_task' %}">Back</a>
+    </ul>
+<br>
+<a class="btn btn-outline-danger" href="{% url 'Task:delete_task' object.id %}">Delete</a>
+{%endblock%}
+
